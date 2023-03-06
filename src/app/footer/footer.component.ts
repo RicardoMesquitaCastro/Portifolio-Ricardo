@@ -14,13 +14,16 @@ export class FooterComponent implements OnInit  {
   
   public footer: footer[] = FOOTER
 
+ 
+
   ngOnInit(): void{  
-    this.listarTodosProdutos()
+    this.listardados()
 
   }
 
-  listarTodosProdutos() {
+  listardados() {
    this.http.get<footer[]>(`https://63a59f6af8f3f6d4abfb383d.mockapi.io/api-portfolio/sendEmail`)    
     .subscribe(resultado => console.log('acaaaaaaa',resultado));
+    
 }
 }
