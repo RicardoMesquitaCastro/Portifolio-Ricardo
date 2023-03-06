@@ -1,0 +1,15 @@
+ <svg viewBox="0 0 500 50">
+    <g  *ngFor="let star of stars"        
+        attr.transform="translate({{(star - 1) * 100}},0)" 
+    comp-star
+    [value] = star
+    [selected] = "ratingValue > star - 1"
+    (starSelected)="selectStar($event)"></g>
+    </svg> 
+
+
+
+
+
+
+

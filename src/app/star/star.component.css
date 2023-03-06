@@ -1,0 +1,15 @@
+.selected{
+    fill: yellow;
+    stroke: black;
+    stroke-width: 2px;
+    
+    
+}
+
+.unselected{
+    fill: gray;
+    stroke: black;
+    stroke-width: 2px;
+    
+   
+}

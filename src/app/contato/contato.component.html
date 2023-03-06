@@ -1,0 +1,39 @@
+
+
+<div class="container" id="contato">   
+    <h3>Mande sua Sugestão</h3>
+        <form (ngSubmit)="submit()" [formGroup]="momentForm" #formDir="ngForm">
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input class="form-control" type="text" placeholder="Digite seu nome" formControlName="nome" requerided/>                
+            </div>
+            <div *ngIf="nome.invalid && formDir.submitted" class="validation-error">
+                <small  *ngIf="nome.errors?.['required']">O nome é obrigatório</small>
+            </div>
+        
+        <div class="form-group">
+            <label for="email">email:</label>
+            <input class="form-control" type="text" placeholder="Digite seu e-mail" formControlName="email"requerided/>           
+        </div>
+        <div *ngIf="email.invalid && formDir.submitted" class="validation-error">
+            <small class="form-text text-red" *ngIf="email.errors?.['required']">O e-mail é obrigatório</small>
+        </div>
+        
+        <div class="form-group">
+            <label for="assunto">Assunto:</label>
+            <input class="form-control" type="text" placeholder="Digite o assunto" formControlName="assunto" requerided/>            
+        </div>
+        <div *ngIf="assunto.invalid && formDir.submitted" >
+            <small class="form-text text-red" *ngIf="assunto.errors?.['required']">O assunto é obrigatório</small>
+        </div>
+    
+        <div class="form-group">
+            <label for="mensagem">Mensagem:</label>
+            <textarea class="form-control" rows="3" type="text" placeholder="Digite sua mensagem aqui..." formControlName="mensagem" requerided></textarea>            
+        </div>   
+        <div *ngIf="mensagem.invalid && formDir.submitted" class="validation-error">
+            <small class="form-text text-red" *ngIf="mensagem.errors?.['required']">A mensagem é obrigatória</small>
+        </div>
+        <button type="submit" value="{{btnText}}">Enviar</button>
+    </form>
+    </div>

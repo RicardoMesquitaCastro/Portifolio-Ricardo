@@ -1,0 +1,15 @@
+     .rodape {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;    
+    bottom:0;
+    width:100%;
+    margin: auto auto;
+    padding: 10px 5px;
+    
+    } 
+
+    a{
+     margin-right: 10px;
+     text-decoration: none;
+     
+    }

@@ -1,0 +1,16 @@
+<section class="resume-section" id="experiencias">        
+    <div class="resume-section-content">            
+        <h2 class="mb-5">Experiências</h2>      
+
+        <div *ngFor="let experiencia of experiencias; index as i " class="d-flex flex-column flex-md-row justify-content-between mb-5">
+            <div class="flex-grow-1">
+                <h3 class="mb-0">{{experiencias[i].cargo}}</h3>
+                <div class="subheading mb-3">{{experiencias[i].empresa}}</div>
+                <p>{{experiencias[i].descricao}}</p>
+            </div>
+            <div class="flex-shrink-0">
+                <app-star-rating></app-star-rating>
+                <span class="text-primary">{{experiencias[i].data}}</span></div>
+        </div>
+    </div>
+</section>
