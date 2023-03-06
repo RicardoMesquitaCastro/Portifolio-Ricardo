@@ -1,15 +1,12 @@
 const express = require('express');
-
+const path = require('path');
+const nomeApp = process.env.npm_package_name;
 const app = express();
 
-const appName = 'portifolio';
+app.use(express.static(`${__dirname}/dist/${nomeApp}`));
 
-const outputPath = `${__dirname}dist/${appName}`;
+app.get('/*', (req, res) => {
+res.sendFile(path.join(`${__dirname}/dist/${nomeApp}/index.html`));
+});
 
-app.use(express.static(outputPath));
-
-app.get('/*',(req,res)=>{
-    res.sendFile(path.join(`${__dirname}/dist/${nomeApp}/index.html`));
-})
-
-app.listen(process.env.PORT);
+app.listen(process.env.PORT || 8080);
