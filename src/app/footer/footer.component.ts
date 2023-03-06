@@ -9,11 +9,11 @@ import { HttpClient } from '@angular/common/http'
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent implements OnInit  {
-  footers!: any;
+  public footers: any;
 
   constructor(private http : HttpClient) { }
   
- // public footer: footer[] = FOOTER
+  public footer: footer[] = FOOTER
 
  
 
