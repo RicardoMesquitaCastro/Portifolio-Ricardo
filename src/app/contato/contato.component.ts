@@ -1,6 +1,7 @@
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-contato',
@@ -42,9 +43,8 @@ export class ContatoComponent implements OnInit {
     return this.momentForm.get('mensagem')!;
   }
 
-  submit(){
+  submit(){    
     if(this.momentForm.invalid)
-    return;
-  }
-
+    Swal.fire('Preencha todos os dados')    
+  } 
 }
