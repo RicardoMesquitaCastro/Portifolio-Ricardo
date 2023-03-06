@@ -1,15 +1,15 @@
-export interface footer{
+export class footer{
+    constructor(
+    public id: number, 
+    public subject_matter: string,    
+    public comment: string,
    
-     id: number, 
-     subject_matter: string,    
-     comment: string,
-   
-     contact:{
+    public contact:{
         name: string,
         tel: string,
         email: string,
 
     }
     
-    
+    ){}
 }

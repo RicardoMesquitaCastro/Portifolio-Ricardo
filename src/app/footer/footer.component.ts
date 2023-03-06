@@ -9,10 +9,11 @@ import { HttpClient } from '@angular/common/http'
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent implements OnInit  {
+  footers!: any;
 
   constructor(private http : HttpClient) { }
   
-  public footer: footer[] = FOOTER
+ // public footer: footer[] = FOOTER
 
  
 
@@ -23,7 +24,8 @@ export class FooterComponent implements OnInit  {
 
   listardados() {
    this.http.get<footer[]>(`https://63a59f6af8f3f6d4abfb383d.mockapi.io/api-portfolio/sendEmail`)    
-    .subscribe(resultado => console.log('acaaaaaaa',resultado));
-    
+    .subscribe(data => {
+      this.footers = data;
+  })
 }
 }
