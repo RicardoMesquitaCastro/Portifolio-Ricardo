@@ -1,7 +1,9 @@
+import { Contato } from './../models/contato';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import Swal from 'sweetalert2';
+
 
 @Component({
   selector: 'app-contato',
@@ -44,7 +46,18 @@ export class ContatoComponent implements OnInit {
   }
 
   submit(){    
-    if(this.momentForm.invalid)
+    if(this.momentForm.invalid){
     Swal.fire('Preencha todos os dados')    
-  } 
+  } else{
+   let contato: Contato = new Contato(
+    this.momentForm.value.nome,
+    this.momentForm.value.email,
+    this.momentForm.value.assunto,
+    this.momentForm.value.mensagem
+    )
+    console.log(contato)
+    Swal.fire('O fomulário foi preenchdio com sucesso')
+    console.log('formulario está valido')
+  }
+}
 }

@@ -34,6 +34,6 @@
         <div *ngIf="mensagem.invalid && formDir.submitted" class="validation-error">
             <small class="form-text text-red" *ngIf="mensagem.errors?.['required']">A mensagem é obrigatória</small>
         </div>
-        <button (click)="submit()" type="submit" value="{{btnText}}">Enviar</button>
+        <button  type="submit" value="{{btnText}}">Enviar</button>
     </form>
     </div>
