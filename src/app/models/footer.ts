@@ -1,6 +1,5 @@
 export class footer{
-    constructor(
-    public id: number, 
+    constructor(    
     public subject_matter: string,    
     public comment: string,
    
@@ -8,7 +7,6 @@ export class footer{
         name: string,
         tel: string,
         email: string,
-
     }
     
     ){}

@@ -1,9 +1,7 @@
 import { footer } from "src/app/models/footer"
 
 export const FOOTER: footer[] =[
-
-    {
-     id:1,
+    {     
      subject_matter:"Desafio Frontend" ,    
      comment: "Conteúdo do e-mail" ,    
      contact:{

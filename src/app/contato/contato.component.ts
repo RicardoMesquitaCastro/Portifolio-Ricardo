@@ -56,7 +56,7 @@ export class ContatoComponent implements OnInit {
     this.momentForm.value.mensagem
     )
     console.log(contato)
-    Swal.fire('O fomulário foi preenchdio com sucesso')
+    Swal.fire('O fomulário foi preenchido com sucesso')
     console.log('formulario está valido')
   }
 }

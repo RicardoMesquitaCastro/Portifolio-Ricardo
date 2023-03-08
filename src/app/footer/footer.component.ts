@@ -13,9 +13,9 @@ export class FooterComponent implements OnInit  {
 
   constructor(private http : HttpClient) { }
   
-  public footer: footer[] = FOOTER
+  // public footer: footer[] = FOOTER
 
- 
+
 
   ngOnInit(): void{  
     this.listardados()
@@ -23,7 +23,7 @@ export class FooterComponent implements OnInit  {
   }
 
   listardados() {
-   this.http.get<footer[]>(`https://63a59f6af8f3f6d4abfb383d.mockapi.io/api-portfolio/sendEmail`)    
+  this.http.get<footer[]>(`https://63a59f6af8f3f6d4abfb383d.mockapi.io/api-portfolio/sendEmail`)    
     .subscribe(data => {
       this.footers = data;
   })
